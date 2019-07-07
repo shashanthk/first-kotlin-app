@@ -2,13 +2,13 @@ package com.example.ktapp.model
 
 import com.google.gson.annotations.SerializedName
 
-class Post() {
+data class Post(
     @SerializedName("userId")
-    var userId: Int = 0
+    var userId: Int,
     @SerializedName("id")
-    var id: Int = 0
+    var id: Int,
     @SerializedName("title")
-    var title: String? = null
+    var title: String,
     @SerializedName("body")
-    var body: String? = null
-}
+    var body: String
+)
