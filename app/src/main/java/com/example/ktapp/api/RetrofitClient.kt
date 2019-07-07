@@ -16,10 +16,10 @@ class RetrofitClient {
 
             if (retrofit == null) {
                 retrofit = Retrofit.Builder()
-                    .baseUrl(ApiConstants.BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .client(buildHttpClient())
-                    .build()
+                        .baseUrl(ApiConstants.BASE_URL)
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .client(buildHttpClient())
+                        .build()
             }
 
             return retrofit!!.create(ApiInterface::class.java)
@@ -27,11 +27,11 @@ class RetrofitClient {
 
         fun buildHttpClient(): OkHttpClient {
             return OkHttpClient.Builder()
-                .connectTimeout(ApiConstants.TIME_OUT, TimeUnit.SECONDS)
-                .readTimeout(ApiConstants.TIME_OUT, TimeUnit.SECONDS)
-                .writeTimeout(ApiConstants.TIME_OUT, TimeUnit.SECONDS)
-                .addInterceptor(getHttpInterceptor())
-                .build()
+                    .connectTimeout(ApiConstants.TIME_OUT, TimeUnit.SECONDS)
+                    .readTimeout(ApiConstants.TIME_OUT, TimeUnit.SECONDS)
+                    .writeTimeout(ApiConstants.TIME_OUT, TimeUnit.SECONDS)
+                    .addInterceptor(getHttpInterceptor())
+                    .build()
         }
 
         fun getHttpInterceptor(): HttpLoggingInterceptor {
