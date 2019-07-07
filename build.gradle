@@ -12,6 +12,8 @@ buildscript {
         juint_version = '4.12'
         test_runner_version = '1.0.2'
         espresso_version = '3.0.2'
+        retrofit_version = '2.6.0'
+        http_interceptor_version = '4.0.0'
     }
 
     repositories {
