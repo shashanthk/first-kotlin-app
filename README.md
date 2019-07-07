@@ -1,0 +1,1 @@
+This is first (sample) Kotlin project which consumes [JSON Placeholder](https://jsonplaceholder.typicode.com/) API and displays it in a RecyclerView
