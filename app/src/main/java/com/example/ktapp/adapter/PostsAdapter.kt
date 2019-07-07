@@ -33,8 +33,8 @@ class PostsAdapter(private val postList: MutableList<Post> = ArrayList()) : Recy
         val post: Post = postList.get(holder.adapterPosition)
         with(post) {
             // "with" keyword avoids redundant usage of class object inside the blocke43
-            holder.tvTitle.setText(title)
-            holder.tvBody.setText(body)
+            holder.tvTitle.text = title
+            holder.tvBody.text = body
         }
     }
 
